@@ -2,6 +2,7 @@
 A golang implementation of the BC5 red/green image compression technique.
 
 GoDoc: https://godoc.org/github.com/leylandski/go-bc5
+Compression/decompression CLI tool: https://github.com/leylandski/bc5-converter
 
 ## Overview
 This library can compress and decompress RGBA image data to and from BC5 encoded blocks. It also includes functionality for writing and reading BC5 encoded data to/from an `io.Writer` or `io.Reader`.
