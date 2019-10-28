@@ -79,8 +79,7 @@ func (b BC5) Size() int32 {
 }
 
 // SetFromRGBA encodes RGBA data into this BC5 image.
-// As this is intended for greyscale height maps, the blue and alpha components of the
-// source are discarded.
+// As this is a red/green compression scheme, the blue and alpha components of the source are discarded.
 func (b *BC5) SetFromRGBA(rgba *image.RGBA) error {
 
 	if rgba.Rect.Size().X != rgba.Rect.Size().Y {
