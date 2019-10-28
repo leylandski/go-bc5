@@ -1,4 +1,4 @@
-#go-bc5
+# go-bc5
 A golang implementation of the BC5 red/green image compression technique.
 
 ### Overview
