@@ -7,7 +7,7 @@ This library allows you to compress and decompress RGBA image data to and from B
 BC5 data encoded using `*BC5.Encode(w io.Writer)` will write a 12-byte header at the beginning of the stream, containing the uint32 equivalent of `"BC5 "` encoded in Big Endian format (0x42433520) followed by two uint32 values denoting the width and height of the image. The proceeding byte is the start of the block data and continues until EOF.  In addition, `*BC5.Decode(r io.Reader)` expects the header and will error if it is not present.
 
 The image on the left is the original, and the image on the right has been compressed and decompressed. The blue value difference is due to the original not being normalised.
-![Before and after](https://imgur.com/xDj4yie)
+![Before and after](https://i.imgur.com/xDj4yie.png)
 
 ### About BC5
 BC5 is a two-channel image compression format where the red and green components in a 4x4 block of pixels are mapped to interpolated colour values between two stored reference colours. Each pixel in the 4x4 grid is assigned a 3-bit index stored along with the reference colours to be interpolated at runtime. The full spec for the BC5 format can be found in the MSDN documentation here: https://docs.microsoft.com/en-gb/windows/win32/direct3d10/d3d10-graphics-programming-guide-resources-block-compression#bc5 
