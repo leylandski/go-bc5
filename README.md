@@ -2,7 +2,7 @@
 A golang implementation of the BC5 red/green image compression technique.
 
 ## Overview
-This library allows you to compress and decompress RGBA image data to and from BC5 encoded blocks. It also includes functionality for writing and reading BC5 encoded data to/from an `io.Writer` or `io.Reader`.
+This library can compress and decompress RGBA image data to and from BC5 encoded blocks. It also includes functionality for writing and reading BC5 encoded data to/from an `io.Writer` or `io.Reader`.
 
 BC5 data encoded using `*BC5.Encode(w io.Writer)` will write a 12-byte header at the beginning of the stream, containing the uint32 equivalent of `"BC5 "` encoded in Big Endian format (0x42433520) followed by two uint32 values denoting the width and height of the image. The proceeding byte is the start of the block data and continues until EOF.  In addition, `*BC5.Decode(r io.Reader)` expects the header and will error if it is not present.
 
