@@ -2,6 +2,7 @@
 A golang implementation of the BC5 red/green image compression technique.
 
 GoDoc: https://godoc.org/github.com/leylandski/go-bc5
+
 Compression/decompression CLI tool: https://github.com/leylandski/bc5-converter
 
 ## Overview
