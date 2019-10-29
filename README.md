@@ -28,3 +28,4 @@ This is an early attempt at implementing the raw BC5 compression/decompression a
 ## TODO
 * Test with OpenGL.
 * Improve API for dealing with the header. Allow the programmer to specify their own for writing and a func interface for parsing them.
+* Add a `CompressFromData` function to allow more flexibility.
